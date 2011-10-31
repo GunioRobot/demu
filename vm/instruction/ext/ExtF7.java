@@ -13,7 +13,7 @@ import  vm.instruction.div.IDivX;
 public class ExtF7 implements Instruction{
     private Instruction[] instructions;
     private Instruction instruction;
-    
+
     public ExtF7(){
         instructions = new Instruction[8];
 
@@ -34,7 +34,7 @@ public class ExtF7 implements Instruction{
         instruction = instructions[code];
         instruction.execute(vm);
     }
-    
+
     @Override
     public String toString(){
         return instruction.toString();

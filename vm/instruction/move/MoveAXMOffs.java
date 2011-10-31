@@ -16,6 +16,6 @@ public class MoveAXMOffs implements Instruction{
             vm.addEIP(3);
         }
 
-        
+
     }
 }

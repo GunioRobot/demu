@@ -10,7 +10,7 @@ public class AndAXImmX implements Instruction{
     public void execute(VM vm){
         long ax = vm.getRegisterX(EAX);
         long imm = vm.getCodeX(1);
-        
+
         long result = ax & imm;
         FlagCheck.check(ax, result, vm.getEFlags(), vm.is32bitOperand() ? 32 : 16);
         vm.setRegisterX(EAX, result);

@@ -30,7 +30,7 @@ public class Bios15 implements Instruction{
             vm.setData32(di + 0x08, length[index]);
             vm.setData32(di + 0x0C, 0);
             vm.setData32(di + 0x10, mmapt[index++]);
- 
+
             if(ebx == 6){
                 vm.setRegister32(EBX, 0);
             }else if(ebx != 3){

@@ -7,7 +7,7 @@ package vm.view;
 public interface VMView{
     //サイズを設定する
     void setSize(int width, int height);
-    
+
     int getRGB(int index);
 
     void setRGB(int index, int rgb);

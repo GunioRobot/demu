@@ -12,7 +12,7 @@ public class IMulX implements Instruction{
         long eax = vm.getRegisterX(EAX);
         long rmx = modrm.getRMValue();
         long result = eax * rmx;
-        
+
         if(result != (int)result){
             vm.getEFlags().setOverflow(true);
             vm.getEFlags().setSign(true);

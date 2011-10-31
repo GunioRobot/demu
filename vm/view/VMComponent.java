@@ -70,7 +70,7 @@ public class VMComponent extends JComponent implements VMView{
 
     public void setRGB(int index, int rgb){
         index /= 4;
-        
+
         int x = index % getWidth();
         int y = index / getWidth();
 
@@ -80,23 +80,23 @@ public class VMComponent extends JComponent implements VMView{
 
         setRGB(x, y, rgb);
     }
-    
+
     public int getRGB(int index){
         index /= 4;
-        
+
         int x = index % getWidth();
         int y = index / getWidth();
 
         if(x >= getWidth() || y >= getHeight()){
             return 0;
         }
-        
+
         return image.getRGB(x, y);
     }
 
     private int rgbCount = 0;
     private int rgbElement = 0;
-    
+
     public void setRGB(int x, int y, int rgb){
         if(palette.getSize() > 0){
             image.setRGB(x, y, palette.getColor(rgb).getInt());
@@ -109,9 +109,9 @@ public class VMComponent extends JComponent implements VMView{
             }else if(rgbCount == 2){
                 rgbElement = rgbElement | rgb << 16;
             }
-            
+
             rgbCount = (rgbCount + 1) % 3;
-            
+
             if(rgbCount == 0){
                 image.setRGB(x, y, rgbElement);
                 repaint();

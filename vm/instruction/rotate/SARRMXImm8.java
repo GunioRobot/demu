@@ -10,7 +10,7 @@ public class SARRMXImm8 implements Instruction{
         long value = (int)modrm.getRMValue();
         int imm = vm.getCode8(2);
         long result = value >> imm;
-        
+
         modrm.setRMValue(result);
         vm.addEIP(3);
     }

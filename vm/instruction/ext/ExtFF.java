@@ -22,7 +22,7 @@ public class ExtFF implements Instruction{
         instructions[2] = new CallRMX();
         instructions[3] = new FarCallMX();
         instructions[4] = new JumpRMX();
-        instructions[5] = new FarJumpMX();        
+        instructions[5] = new FarJumpMX();
         instructions[6] = new PushRMX();
     }
 

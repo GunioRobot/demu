@@ -77,7 +77,7 @@ public class VM{
     private Map<String, Device> deviceMap;
 
     public static final String KEYBOARD = "KeyBoard";
-    
+
     //レジスタ群を初期化するコンストラクタ
     public VM(int memorySize, VMView view){
         registers = new long[RegisterIndex.SIZE];
@@ -325,10 +325,10 @@ public class VM{
             VMView view = getView();
             return view.getRGB(address - 0xa000000) & 0xFF;
         }
-        
+
         return get8(address);
     }
-    
+
     //現在のデータセグメントにあるaddressの2byteのデータを返す
     public long getData16(int address){
         address = getDataAddress(address & 0xFFFF);
@@ -348,7 +348,7 @@ public class VM{
             VMView view = getView();
             return view.getRGB(address - 0xa000000);
         }
-        
+
         if(address >= memory.length){
             return -1;
         }
@@ -383,7 +383,7 @@ public class VM{
             VMView view = getView();
             view.setRGB(address - 0xa000000, (int)data);
         }
-        
+
         if(memory.length > address){
             set8(address, data);
         }

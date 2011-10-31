@@ -10,12 +10,12 @@ public class Memory16 extends RM{
         this.address = address;
         super.size = size;
     }
-    
+
     @Override
     public void set8(int value){
         vm.setData32(address, (int)value);
     }
-    
+
     @Override
     public int get8(){
         return vm.getData8(address);

@@ -22,7 +22,7 @@ public class ExtC0 implements Instruction{
         instructions[0x03] = new RCR8();
         instructions[0x04] = new SAL8();
         instructions[0x05] = new SHR8();
-        instructions[0x07] = new SAR8();        
+        instructions[0x07] = new SAR8();
     }
 
     public void execute(VM vm){

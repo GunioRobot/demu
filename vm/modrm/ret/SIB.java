@@ -13,7 +13,7 @@ public class SIB{
         if((sib & 0x07) == 0x05){
             base = vm.getSignedCode32(3);
         }
-        
+
         if(index != 4){
             reg = (int)vm.getRegister32(index);
         }

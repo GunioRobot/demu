@@ -17,7 +17,7 @@ public class INALImm8 implements Instruction{
         }else if(port == 0x60){
             vm.setRegister8Low(EAX, 0);
         }else if(port == 0x64){
-             
+
         }else{
             throw new RuntimeException("IN port = " + Integer.toHexString(port));
         }

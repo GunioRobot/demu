@@ -10,7 +10,7 @@ public class IMulRXRMX implements Instruction{
         long rx = modrm.getRegisterX();
         long rmx = modrm.getRMValue();
         long result = rx * rmx;
-        
+
         if(result != (int)result){
             vm.getEFlags().setOverflow(true);
             vm.getEFlags().setSign(true);

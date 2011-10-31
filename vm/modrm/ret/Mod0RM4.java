@@ -12,11 +12,11 @@ public class Mod0RM4 implements RMReturn{
         if(vm.is32bitAddress()){
             int count = 1;
             int sib = vm.getCode8(2);
-            
+
             if((sib & 0x07) == 0x05){
                 count += 4;
             }
-            
+
             return new Memory32(vm, SIB.getSIB(vm, sib), count);
         }else{
             return new Memory16(vm, vm.getRegister16(ESI), 0);

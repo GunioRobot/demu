@@ -10,7 +10,7 @@ public class AddRMXRX implements Instruction{
         ModRM modrm = vm.getModRM();
         long rmx = modrm.getRMValue();
         long rx = modrm.getRegisterX();
-        
+
         long result = rmx + rx;
         FlagCheck.addCheck(rmx, rx, result, vm.getEFlags(), vm.is32bitOperand() ? 32 : 16);
         modrm.setRMValue(result);

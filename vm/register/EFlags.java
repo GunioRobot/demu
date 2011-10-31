@@ -87,7 +87,7 @@ public class EFlags{
         }else{
             eflags &= ~interruptFlag;
         }
-    }    
+    }
 
     public boolean isInterrupt(){
         int cinterrupt = (eflags >> 0x09) & 0x01;
@@ -101,7 +101,7 @@ public class EFlags{
         }else{
             eflags &= ~directionFlag;
         }
-    }    
+    }
 
     public boolean isDirection(){
         int cdirection = (eflags >> 0x0A) & 0x01;

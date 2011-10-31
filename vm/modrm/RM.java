@@ -13,20 +13,20 @@ public abstract class RM{
     public int getSize(){
         return size;
     }
-    
+
     public void set8(int value){
         if(true){
             throw new RuntimeException(getClass().getName());
         }
-        
+
         return;
     }
-    
+
     public int get8(){
         if(true){
             throw new RuntimeException(getClass().getName());
         }
-        
+
         return 0;
     }
 
